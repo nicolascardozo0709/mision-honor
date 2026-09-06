@@ -58,10 +58,15 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 90px;
   font-size: 16px;
   background-color: var(--bg-deep);
   color: var(--text-primary);
   font-family: var(--font-body);
+}
+
+section[id] {
+  scroll-margin-top: 90px;
 }
 
 body {
@@ -254,9 +259,9 @@ body {
 
 .nav-link {
   font-family: var(--font-body);
-  font-size: 0.85rem;
+  font-size: clamp(0.76rem, 0.84vw, 0.85rem);
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   font-weight: 600;
   color: #d1dbcf;
   text-decoration: none;
@@ -622,6 +627,9 @@ body {
     padding: 0.9rem;
     bottom: 20px;
     right: 20px;
+  }
+  footer {
+    padding-bottom: 5.5rem !important;
   }
 }
 
