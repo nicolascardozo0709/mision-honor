@@ -1,0 +1,642 @@
+/* ==========================================================================
+   MISIÓN HONOR — Luxury Tactical Atelier Stylesheet
+   Aesthetic: Refined Obsidian, Military Olive Drab & Brushed Champagne Gold
+   ========================================================================== */
+
+:root {
+  --bg-black: #060907;
+  --bg-deep: #090e0a;
+  --bg-surface: #0f1511;
+  --bg-card: #131b15;
+  --bg-card-hover: #18231b;
+  --bg-elevated: #1d2b21;
+
+  --border-subtle: rgba(255, 255, 255, 0.07);
+  --border-card: rgba(197, 160, 89, 0.2);
+  --border-hover: rgba(197, 160, 89, 0.45);
+
+  --gold-100: #fef7e0;
+  --gold-200: #f7e6b5;
+  --gold-300: #e9cf85;
+  --gold-400: #dfbe76;
+  --gold-500: #c5a059;
+  --gold-600: #a27e38;
+  --gold-700: #7b5d22;
+
+  --text-primary: #f5f4ef;
+  --text-secondary: #a8b2a5;
+  --text-tertiary: #6e796c;
+
+  --accent-whatsapp: #25D366;
+  --accent-whatsapp-dark: #1ea952;
+
+  --font-display: 'Cinzel', 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 8px 24px -4px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 20px 45px -10px rgba(0, 0, 0, 0.8);
+  --shadow-gold: 0 8px 25px -4px rgba(197, 160, 89, 0.25);
+
+  --gradient-gold: linear-gradient(135deg, #f7e6b5 0%, #dfbe76 50%, #a27e38 100%);
+  --gradient-gold-hover: linear-gradient(135deg, #fff3cb 0%, #ecd089 50%, #b38d43 100%);
+  --gradient-card: linear-gradient(180deg, rgba(19, 27, 21, 0.85) 0%, rgba(12, 17, 13, 0.95) 100%);
+  --gradient-hero: radial-gradient(circle at 75% 30%, rgba(33, 49, 36, 0.5) 0%, rgba(9, 14, 10, 0.98) 75%);
+}
+
+/* Base Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  background-color: var(--bg-deep);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+}
+
+body {
+  overflow-x: hidden;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--bg-deep);
+}
+
+/* Subtle Technical Grid Background */
+.bg-tactical-grid {
+  background-image: 
+    linear-gradient(to right, rgba(197, 160, 89, 0.025) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(197, 160, 89, 0.025) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-black);
+}
+::-webkit-scrollbar-thumb {
+  background: #1c281f;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold-600);
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 1240px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* Typography Utilities */
+.font-display {
+  font-family: var(--font-display);
+  letter-spacing: 0.04em;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.24em;
+  color: var(--gold-400);
+}
+
+.text-gold-gradient {
+  background: var(--gradient-gold);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.8rem 1.6rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.25, 1, 0.5, 1);
+  text-decoration: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn-gold {
+  background: var(--gradient-gold);
+  color: #080c09;
+  border-color: rgba(247, 230, 181, 0.4);
+  box-shadow: var(--shadow-gold);
+  font-weight: 800;
+}
+.btn-gold:hover {
+  background: var(--gradient-gold-hover);
+  box-shadow: 0 10px 30px -2px rgba(197, 160, 89, 0.4);
+  transform: translateY(-2px);
+  color: #000;
+}
+
+.btn-outline-gold {
+  background: rgba(19, 27, 21, 0.7);
+  color: var(--gold-300);
+  border-color: rgba(197, 160, 89, 0.35);
+  backdrop-filter: blur(8px);
+}
+.btn-outline-gold:hover {
+  border-color: var(--gold-400);
+  background: rgba(197, 160, 89, 0.1);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.btn-whatsapp {
+  background-color: var(--accent-whatsapp);
+  color: #ffffff;
+  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.3);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+.btn-whatsapp:hover {
+  background-color: var(--accent-whatsapp-dark);
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.45);
+  transform: translateY(-2px);
+}
+
+.btn-sm {
+  padding: 0.55rem 1.15rem;
+  font-size: 0.74rem;
+  letter-spacing: 0.12em;
+}
+
+.btn-lg {
+  padding: 1rem 2.2rem;
+  font-size: 0.88rem;
+}
+
+/* Badges */
+.pill-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.3rem 0.75rem;
+  border-radius: var(--radius-full);
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  backdrop-filter: blur(6px);
+}
+
+.pill-badge-gold {
+  background: rgba(197, 160, 89, 0.15);
+  border: 1px solid rgba(197, 160, 89, 0.35);
+  color: var(--gold-300);
+}
+
+.pill-badge-dark {
+  background: rgba(9, 14, 10, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-secondary);
+}
+
+/* Header & Nav */
+.header-glass {
+  position: sticky;
+  top: 0;
+  z-index: 80;
+  background: rgba(9, 14, 10, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.gold-ribbon-top {
+  height: 2px;
+  width: 100%;
+  background: var(--gradient-gold);
+  opacity: 0.8;
+}
+
+.nav-link {
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  position: relative;
+  padding: 0.25rem 0;
+  white-space: nowrap !important;
+  flex-shrink: 0;
+  display: inline-block;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--gold-400);
+  transition: width 0.25s ease;
+}
+
+.nav-link:hover {
+  color: #ffffff;
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.desktop-nav {
+  display: none;
+  align-items: center;
+  gap: 1.25rem;
+  flex-shrink: 0;
+}
+.mobile-menu-trigger {
+  display: flex !important;
+}
+@media (min-width: 1040px) {
+  .desktop-nav {
+    display: flex !important;
+  }
+  .mobile-menu-trigger {
+    display: none !important;
+  }
+}
+
+
+/* Hero Section */
+.hero-wrapper {
+  position: relative;
+  overflow: hidden;
+  background: var(--gradient-hero);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.hero-frame-outer {
+  position: relative;
+  border-radius: var(--radius-lg);
+  padding: 6px;
+  background: linear-gradient(145deg, rgba(197, 160, 89, 0.3) 0%, rgba(255, 255, 255, 0.05) 50%, rgba(197, 160, 89, 0.15) 100%);
+  box-shadow: var(--shadow-lg);
+}
+
+.hero-frame-inner {
+  position: relative;
+  border-radius: calc(var(--radius-lg) - 4px);
+  overflow: hidden;
+  background: #000000;
+  aspect-ratio: 16 / 11; /* Accurately matches 1374x1145 hero_general.png */
+}
+
+.hero-frame-inner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.hero-frame-outer:hover .hero-frame-inner img {
+  transform: scale(1.02);
+}
+
+/* Product Cards (Clean E-Commerce Luxury) */
+.product-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: var(--gradient-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: all 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+  cursor: pointer;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--border-hover);
+  box-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.75), 0 0 20px rgba(197, 160, 89, 0.18);
+}
+
+/* Product Image Container: 4:5 PORTRAIT matching the photos! */
+.product-image-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  background: #090e0a;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.product-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.product-card:hover .product-image-container img {
+  transform: scale(1.04);
+}
+
+.card-badge-top-left {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 5;
+}
+
+.card-badge-collection {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 5;
+  font-size: 0.62rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 0.25rem 0.6rem;
+  border-radius: var(--radius-sm);
+  background: rgba(9, 14, 10, 0.85);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: var(--text-primary);
+}
+
+/* Tactical Spec Card */
+.tactical-spec-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.25rem;
+  background: rgba(19, 27, 21, 0.6);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  transition: all 0.25s ease;
+}
+
+.tactical-spec-card:hover {
+  border-color: rgba(197, 160, 89, 0.35);
+  background: rgba(19, 27, 21, 0.9);
+  transform: translateY(-2px);
+}
+
+.spec-icon-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  border-radius: var(--radius-sm);
+  background: rgba(197, 160, 89, 0.1);
+  border: 1px solid rgba(197, 160, 89, 0.25);
+  color: var(--gold-400);
+}
+
+/* Tactical Dossier Card Simulator (Luxury Dark Edition) */
+.mission-simulator-card {
+  position: relative;
+  background: #0f1611;
+  color: #f5f4ef;
+  border-radius: var(--radius-md);
+  padding: 2.25rem 2rem;
+  box-shadow: 0 25px 60px -10px rgba(0, 0, 0, 0.85);
+  border: 1px solid rgba(197, 160, 89, 0.35);
+}
+
+.mission-simulator-card::before {
+  content: '';
+  position: absolute;
+  inset: 6px;
+  border: 1px solid rgba(197, 160, 89, 0.15);
+  border-radius: calc(var(--radius-md) - 4px);
+  pointer-events: none;
+}
+
+/* Modal / Dossier */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: rgba(4, 7, 5, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-container {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: #0d140f;
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.95);
+  transform: scale(0.96) translateY(12px);
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.modal-overlay.active .modal-container {
+  transform: scale(1) translateY(0);
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  z-index: 20;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(19, 27, 21, 0.85);
+  border: 1px solid rgba(197, 160, 89, 0.3);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.modal-close-btn:hover {
+  background: var(--gold-500);
+  color: #080c09;
+}
+
+/* Accordion FAQ */
+.faq-item {
+  border-bottom: 1px solid var(--border-subtle);
+  transition: background 0.2s ease;
+}
+
+.faq-trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  padding: 1.4rem 0.5rem;
+  background: none;
+  border: none;
+  text-align: left;
+  color: var(--text-primary);
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.faq-trigger:hover {
+  color: var(--gold-300);
+}
+
+.faq-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+  color: var(--gold-400);
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(180deg);
+}
+
+.faq-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s cubic-bezier(0, 1, 0, 1);
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+  line-height: 1.7;
+}
+
+.faq-content-inner {
+  padding: 0 0.5rem 1.4rem 0.5rem;
+}
+
+.faq-item.active .faq-content {
+  max-height: 600px;
+  transition: max-height 0.45s ease-in-out;
+}
+
+/* Floating WhatsApp Button */
+.floating-whatsapp {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 80;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  background: var(--accent-whatsapp);
+  color: #ffffff;
+  padding: 0.8rem 1.25rem;
+  border-radius: var(--radius-full);
+  box-shadow: 0 8px 28px rgba(37, 211, 102, 0.4);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.floating-whatsapp:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 12px 35px rgba(37, 211, 102, 0.55);
+  background: var(--accent-whatsapp-dark);
+}
+
+.pulse-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #ffffff;
+  animation: pulse-ring 2s infinite;
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.9);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 7px rgba(255, 255, 255, 0);
+  }
+  100% {
+    transform: scale(0.9);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
+
+@media (max-width: 768px) {
+  .floating-whatsapp span {
+    display: none;
+  }
+  .floating-whatsapp {
+    padding: 0.9rem;
+    bottom: 20px;
+    right: 20px;
+  }
+}
