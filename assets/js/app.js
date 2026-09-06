@@ -48,9 +48,6 @@ function initCatalog() {
           <div class="card-badge-top-left">
             <span class="pill-badge pill-badge-gold">${product.badge}</span>
           </div>
-          <div class="card-badge-collection">
-            ${product.collectionName}
-          </div>
         </div>
         <div style="padding: 1.5rem; display: flex; flex-direction: column; flex-grow: 1;">
           <p style="font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.22em; color: var(--gold-400); font-weight: 700; margin-bottom: 0.35rem;">

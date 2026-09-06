@@ -285,24 +285,6 @@ body {
   width: 100%;
 }
 
-.desktop-nav {
-  display: none;
-  align-items: center;
-  gap: 1.25rem;
-  flex-shrink: 0;
-}
-.mobile-menu-trigger {
-  display: flex !important;
-}
-@media (min-width: 1040px) {
-  .desktop-nav {
-    display: flex !important;
-  }
-  .mobile-menu-trigger {
-    display: none !important;
-  }
-}
-
 
 /* Hero Section */
 .hero-wrapper {
@@ -361,11 +343,11 @@ body {
   box-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.75), 0 0 20px rgba(197, 160, 89, 0.18);
 }
 
-/* Product Image Container: 4:5 PORTRAIT matching the photos! */
+/* Product Image Container: 1:1 SQUARE matching Lovable, centered on the physical products */
 .product-image-container {
   position: relative;
   width: 100%;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 1 / 1;
   background: #090e0a;
   overflow: hidden;
   border-bottom: 1px solid var(--border-subtle);
@@ -375,7 +357,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center top;
+  object-position: center 42%;
   display: block;
   transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
 }
