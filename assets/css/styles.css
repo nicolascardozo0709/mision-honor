@@ -30,7 +30,7 @@
   --accent-whatsapp: #25D366;
   --accent-whatsapp-dark: #1ea952;
 
-  --font-display: 'Cinzel', 'Cormorant Garamond', Georgia, serif;
+  --font-display: 'Cormorant Garamond', 'Cinzel', Georgia, serif;
   --font-body: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
 
   --radius-sm: 6px;
@@ -253,15 +253,16 @@ body {
 }
 
 .nav-link {
-  font-size: 0.74rem;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
   text-transform: uppercase;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.08em;
   font-weight: 600;
-  color: var(--text-secondary);
+  color: #d1dbcf;
   text-decoration: none;
-  transition: color 0.2s ease;
+  transition: color 0.2s ease, text-shadow 0.2s ease;
   position: relative;
-  padding: 0.25rem 0;
+  padding: 0.35rem 0;
   white-space: nowrap !important;
   flex-shrink: 0;
   display: inline-block;
@@ -280,6 +281,7 @@ body {
 
 .nav-link:hover {
   color: #ffffff;
+  text-shadow: 0 0 12px rgba(223, 190, 118, 0.4);
 }
 .nav-link:hover::after {
   width: 100%;
@@ -621,4 +623,218 @@ body {
     bottom: 20px;
     right: 20px;
   }
+}
+
+/* ============================================================
+   GALERÍA OFICIAL MISIÓN HONOR (6 CATEGORÍAS)
+   ============================================================ */
+.galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+}
+
+@media (min-width: 640px) {
+  .galeria-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .galeria-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.galeria-card {
+  position: relative;
+  background: var(--gradient-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: all 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-sm);
+}
+
+.galeria-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--gold-400);
+  box-shadow: 0 16px 40px -8px rgba(0, 0, 0, 0.85), 0 0 25px rgba(197, 160, 89, 0.2);
+}
+
+.galeria-img-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: #080c09;
+}
+
+.galeria-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.galeria-card:hover .galeria-img-wrap img {
+  transform: scale(1.05);
+}
+
+.galeria-badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 10;
+  padding: 0.35rem 0.8rem;
+  background: rgba(9, 14, 10, 0.85);
+  border: 1px solid rgba(197, 160, 89, 0.4);
+  border-radius: var(--radius-full);
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--gold-300);
+  backdrop-filter: blur(8px);
+}
+
+.galeria-body {
+  padding: 1.6rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.galeria-num {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-weight: 700;
+  color: var(--gold-400);
+  margin-bottom: 0.4rem;
+  display: block;
+}
+
+.galeria-title {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.65rem;
+  line-height: 1.25;
+}
+
+.galeria-desc {
+  font-size: 0.86rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* ============================================================
+   ÓRDENES DE MISIÓN SHOWCASE (REAL PHOTOS)
+   ============================================================ */
+.ordenes-showcase-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 3.5rem;
+}
+
+@media (min-width: 768px) {
+  .ordenes-showcase-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.orden-photo-card {
+  position: relative;
+  background: var(--gradient-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: all 0.3s ease;
+}
+
+.orden-photo-card:hover {
+  border-color: var(--gold-400);
+  box-shadow: 0 16px 45px -8px rgba(0, 0, 0, 0.9), 0 0 30px rgba(197, 160, 89, 0.2);
+}
+
+.orden-photo-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: #000000;
+}
+
+.orden-photo-frame.portrait {
+  aspect-ratio: 4 / 4.8;
+}
+
+.orden-photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.orden-photo-card:hover .orden-photo-frame img {
+  transform: scale(1.03);
+}
+
+.orden-photo-caption {
+  padding: 1.35rem 1.5rem;
+  border-top: 1px solid rgba(197, 160, 89, 0.2);
+  background: rgba(12, 17, 13, 0.95);
+}
+
+/* ============================================================
+   SECCIÓN DE HOMENAJE / MEMORIAL
+   ============================================================ */
+.homenaje-section {
+  position: relative;
+  padding: 6.5rem 0;
+  background: radial-gradient(circle at 50% 35%, #142217 0%, #080c09 75%);
+  border-top: 1px solid rgba(197, 160, 89, 0.25);
+  border-bottom: 1px solid rgba(197, 160, 89, 0.25);
+  overflow: hidden;
+  text-align: center;
+}
+
+.homenaje-frame {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 4rem 2.5rem;
+  background: rgba(9, 14, 10, 0.82);
+  border: 1px solid rgba(197, 160, 89, 0.38);
+  border-radius: var(--radius-lg);
+  backdrop-filter: blur(16px);
+  position: relative;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.95), inset 0 0 50px rgba(197, 160, 89, 0.04);
+}
+
+.homenaje-frame::before {
+  content: '';
+  position: absolute;
+  inset: 8px;
+  border: 1px solid rgba(197, 160, 89, 0.18);
+  border-radius: calc(var(--radius-lg) - 6px);
+  pointer-events: none;
+}
+
+.homenaje-divider {
+  width: 80px;
+  height: 2px;
+  background: var(--gradient-gold);
+  margin: 1.75rem auto;
+  opacity: 0.85;
 }
