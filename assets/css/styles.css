@@ -134,10 +134,12 @@ body {
   color: var(--gold-400);
 }
 
-.text-gold-gradient {
-  background: var(--gradient-gold);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.text-gold-gradient,
+.text-gold-accent {
+  color: var(--gold-300);
+  background: none;
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: initial;
 }
 
 /* Buttons */
