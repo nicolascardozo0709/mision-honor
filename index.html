@@ -135,7 +135,7 @@
           </div>
 
           <!-- Trust Pillars (SVG icons, NO EMOJIS) -->
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0.85rem; border-top: 1px solid rgba(255, 255, 255, 0.08); padding-top: 1.5rem;">
+          <div class="hero-trust-grid">
             <div style="display: flex; align-items: center; gap: 0.55rem; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-secondary);">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#dfbe76" stroke-width="2"><circle cx="12" cy="8" r="6"></circle><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path></svg>
               Regalos con Propósito
@@ -162,12 +162,12 @@
             <div class="hero-frame-inner">
               <img src="assets/images/FOTO_GENERAL_MISION_HONOR.png" alt="Kit Táctico Oficial MISIÓN HONOR en lona Oxford 600D" />
             </div>
-            <div style="position: absolute; bottom: 18px; left: 18px; right: 18px; padding: 0.9rem 1.2rem; background: rgba(9, 14, 10, 0.9); border: 1px solid rgba(197, 160, 89, 0.35); border-radius: 8px; backdrop-filter: blur(12px); display: flex; align-items: center; justify-content: space-between;">
+            <div style="position: absolute; bottom: clamp(10px, 2.5vw, 18px); left: clamp(10px, 2.5vw, 18px); right: clamp(10px, 2.5vw, 18px); padding: clamp(0.6rem, 1.8vw, 0.9rem) clamp(0.85rem, 2.2vw, 1.2rem); background: rgba(9, 14, 10, 0.92); border: 1px solid rgba(197, 160, 89, 0.35); border-radius: 8px; backdrop-filter: blur(12px); display: flex; align-items: center; justify-content: space-between; gap: 0.5rem;">
               <div>
                 <span style="font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.2em; color: var(--gold-400); font-weight: 700; display: block;">Edición Oficial 2026</span>
-                <span class="font-display" style="font-size: 0.95rem; color: #ffffff; font-weight: 700;">Estuche Oficial + Guardián del Corazón</span>
+                <span class="font-display" style="font-size: clamp(0.85rem, 1.8vw, 0.98rem); color: #ffffff; font-weight: 700;">Estuche Oficial + Guardián del Corazón</span>
               </div>
-              <div style="text-align: right;">
+              <div style="text-align: right; flex-shrink: 0;">
                 <span style="font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--text-tertiary); display: block;">Despachos</span>
                 <span style="font-size: 0.85rem; font-weight: 700; color: #ffffff;">Colombia</span>
               </div>
@@ -304,10 +304,10 @@
         </p>
 
         <!-- 3 Pilares de Impacto Social -->
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.75rem; margin-bottom: 2.5rem;">
+        <div class="social-pillars-grid">
           
           <!-- Pilar 1 -->
-          <div style="background: rgba(12, 17, 13, 0.7); border: 1px solid rgba(197, 160, 89, 0.2); border-radius: var(--radius-md); padding: 1.6rem; transition: border-color 0.3s ease;">
+          <div class="social-pillar-item">
             <div style="width: 44px; height: 44px; border-radius: 50%; background: #162218; border: 1px solid var(--gold-400); display: flex; align-items: center; justify-content: center; color: var(--gold-300); margin-bottom: 1.1rem;">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
             </div>
@@ -320,7 +320,7 @@
           </div>
 
           <!-- Pilar 2 -->
-          <div style="background: rgba(12, 17, 13, 0.7); border: 1px solid rgba(197, 160, 89, 0.2); border-radius: var(--radius-md); padding: 1.6rem; transition: border-color 0.3s ease;">
+          <div class="social-pillar-item">
             <div style="width: 44px; height: 44px; border-radius: 50%; background: #162218; border: 1px solid var(--gold-400); display: flex; align-items: center; justify-content: center; color: var(--gold-300); margin-bottom: 1.1rem;">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
             </div>
@@ -333,7 +333,7 @@
           </div>
 
           <!-- Pilar 3 -->
-          <div style="background: rgba(12, 17, 13, 0.7); border: 1px solid rgba(197, 160, 89, 0.2); border-radius: var(--radius-md); padding: 1.6rem; transition: border-color 0.3s ease;">
+          <div class="social-pillar-item">
             <div style="width: 44px; height: 44px; border-radius: 50%; background: #162218; border: 1px solid var(--gold-400); display: flex; align-items: center; justify-content: center; color: var(--gold-300); margin-bottom: 1.1rem;">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
             </div>
@@ -488,7 +488,7 @@
             Cada una de nuestras misiones se entrega dentro de una pieza táctica de colección. Fabricado bajo estándares de grado militar con lona Oxford 600D repelente al agua, acolchado interior con separadores modulares configurables y acabado en verde oliva militar.
           </p>
 
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.25rem; margin-bottom: 2.5rem;">
+          <div class="tactical-specs-grid">
             <div class="tactical-spec-card">
               <div class="spec-icon-box">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
@@ -727,6 +727,25 @@
           </div>
         </div>
 
+        <!-- Foto 3: Orden de Misión Liderazgo & Rango Superior -->
+        <div class="orden-photo-card">
+          <div class="orden-photo-frame portrait">
+            <img src="assets/images/orden_mision_rango_superior.jpg" alt="Orden de Misión de Honor, Liderazgo y Respeto para rango superior o mentor en pergamino marfil" loading="lazy" />
+          </div>
+          <div class="orden-photo-caption">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.45rem;">
+              <span style="font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.18em; color: var(--gold-400); font-weight: 700;">Liderazgo & Respeto</span>
+              <span class="pill-badge pill-badge-gold">Edición Rango</span>
+            </div>
+            <h4 class="font-display" style="font-size: 1.2rem; color: #ffffff; font-weight: 700; margin-bottom: 0.4rem;">
+              Orden de Misión — Rango Superior
+            </h4>
+            <p style="font-size: 0.84rem; color: var(--text-secondary); line-height: 1.55; margin: 0;">
+              Diseñada para superiores, mentores y comandantes. Distinción solemne, redacción de honor y reconocimiento al deber.
+            </p>
+          </div>
+        </div>
+
       </div>
 
       <!-- Live Simulator Header -->
@@ -795,50 +814,50 @@
           </div>
         </div>
 
-        <!-- Luxury Dark Dossier Card Preview -->
+        <!-- Authentic Parchment Mission Card Preview -->
         <div>
           <div class="mission-simulator-card">
             
-            <div style="display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 1px solid rgba(197, 160, 89, 0.25); padding-bottom: 1.25rem; margin-bottom: 1.5rem;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 1px solid rgba(162, 126, 56, 0.35); padding-bottom: 1.25rem; margin-bottom: 1.5rem;">
               <div>
-                <span id="sim-preview-code" style="font-size: 0.65rem; font-family: monospace; letter-spacing: 0.25em; color: var(--gold-400); display: block;">DOC-MH-COL-784</span>
-                <h4 class="font-display" style="font-size: 1.25rem; font-weight: 800; letter-spacing: 0.12em; color: #ffffff; text-transform: uppercase;">
+                <span id="sim-preview-code" style="font-size: 0.68rem; font-family: monospace; letter-spacing: 0.22em; color: #8c6a28; font-weight: 700; display: block;">DOC-MH-COL-784</span>
+                <h4 class="font-display" style="font-size: 1.3rem; font-weight: 800; letter-spacing: 0.1em; color: #141f17; text-transform: uppercase; margin: 0.25rem 0;">
                   ORDEN DE MISIÓN ESPECIAL
                 </h4>
-                <span id="sim-preview-occasion" style="font-size: 0.7rem; font-weight: 700; letter-spacing: 0.18em; color: var(--gold-300); text-transform: uppercase;">
+                <span id="sim-preview-occasion" style="font-size: 0.72rem; font-weight: 800; letter-spacing: 0.16em; color: #997224; text-transform: uppercase;">
                   ANIVERSARIO DE HONOR & AMOR
                 </span>
               </div>
 
               <!-- Official Emblem Badge -->
-              <div style="width: 54px; height: 54px; border-radius: 50%; background: #18231c; border: 1.5px solid var(--gold-400); display: flex; flex-direction: column; align-items: center; justify-content: center; color: var(--gold-300); box-shadow: var(--shadow-sm);">
-                <span style="font-size: 0.6rem; font-weight: 800; letter-spacing: 0.08em;">MH</span>
-                <span style="font-size: 0.48rem; letter-spacing: 0.12em; color: #a8b8a5;">OFICIAL</span>
+              <div style="width: 52px; height: 52px; border-radius: 50%; background: #141f17; border: 2px solid #c5a059; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #f7e6b5; box-shadow: 0 4px 10px rgba(0,0,0,0.2); flex-shrink: 0;">
+                <span style="font-size: 0.68rem; font-weight: 900; letter-spacing: 0.08em; line-height: 1;">MH</span>
+                <span style="font-size: 0.44rem; letter-spacing: 0.12em; color: #dfbe76; font-weight: 700;">OFICIAL</span>
               </div>
             </div>
 
             <!-- Recipient Field -->
-            <div style="margin-bottom: 1.5rem; background: rgba(197, 160, 89, 0.06); padding: 0.75rem 1.1rem; border-left: 3px solid var(--gold-400); border-radius: 0 6px 6px 0;">
-              <span style="font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.2em; color: var(--gold-300); display: block; font-weight: 700;">DESTINATARIO DE HONOR:</span>
-              <span id="sim-preview-recipient" style="font-size: 1.05rem; font-weight: 800; color: #ffffff; letter-spacing: 0.06em;">MI GUERRERA VALIENTE</span>
+            <div style="margin-bottom: 1.5rem; background: rgba(197, 160, 89, 0.15); padding: 0.85rem 1.2rem; border-left: 3px solid #b3883b; border-radius: 0 6px 6px 0;">
+              <span style="font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.2em; color: #725620; display: block; font-weight: 800;">DESTINATARIO DE HONOR:</span>
+              <span id="sim-preview-recipient" style="font-size: 1.05rem; font-weight: 800; color: #141f17; letter-spacing: 0.06em;">MI GUERRERA VALIENTE</span>
             </div>
 
             <!-- Dedication Message -->
             <div style="margin-bottom: 2rem; min-height: 110px;">
-              <p id="sim-preview-message" style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.3rem; font-style: italic; color: #e8e5dc; line-height: 1.6;">
+              <p id="sim-preview-message" style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.35rem; font-style: italic; color: #1e2820; line-height: 1.6; font-weight: 600;">
                 "Por ser mi mayor victoria, mi refugio en cada batalla y la persona con quien elijo caminar toda la vida. Gracias por tu amor incondicional y por honrar cada día a mi lado."
               </p>
             </div>
 
             <!-- Card Footer -->
-            <div style="display: flex; justify-content: space-between; align-items: flex-end; border-top: 1px dashed rgba(255, 255, 255, 0.12); padding-top: 1.25rem;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-end; border-top: 1px dashed rgba(162, 126, 56, 0.45); padding-top: 1.25rem;">
               <div>
-                <span style="font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.2em; color: var(--text-tertiary); display: block;">FIRMA Y RECONOCIMIENTO:</span>
-                <span id="sim-preview-sender" style="font-size: 0.88rem; font-weight: 700; color: var(--gold-300);">CON AMOR Y ADMIRACIÓN ETERNA</span>
+                <span style="font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.2em; color: #6a6254; display: block; font-weight: 700;">FIRMA Y RECONOCIMIENTO:</span>
+                <span id="sim-preview-sender" style="font-size: 0.9rem; font-weight: 800; color: #8c6a28;">CON AMOR Y ADMIRACIÓN ETERNA</span>
               </div>
               <div style="text-align: right;">
-                <span style="font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--text-tertiary); display: block;">DESPACHO OFICIAL:</span>
-                <span style="font-size: 0.75rem; font-weight: 700; color: #ffffff;">REPÚBLICA DE COLOMBIA</span>
+                <span style="font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.15em; color: #6a6254; display: block; font-weight: 700;">DESPACHO OFICIAL:</span>
+                <span style="font-size: 0.78rem; font-weight: 800; color: #141f17;">REPÚBLICA DE COLOMBIA</span>
               </div>
             </div>
 

@@ -53,35 +53,37 @@ function initCatalog() {
           <p style="font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.22em; color: var(--gold-400); font-weight: 700; margin-bottom: 0.35rem;">
             ${product.collectionName}
           </p>
-          <h3 class="font-display" style="font-size: 1.35rem; color: #ffffff; font-weight: 800; line-height: 1.25; margin-bottom: 0.5rem; letter-spacing: 0.05em;">
+          <h3 class="font-display" style="font-size: 1.35rem; color: #ffffff; font-weight: 800; line-height: 1.25; margin-bottom: 0.5rem; letter-spacing: 0.05em; min-height: 2.5rem; display: flex; align-items: center;">
             ${product.name}
           </h3>
-          <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.55; margin-bottom: 1rem; flex-grow: 1;">
+          <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.55; margin-bottom: 1rem; min-height: 2.6rem;">
             ${product.tagline}
           </p>
           
-          <div style="margin-bottom: 1rem;">
+          <div style="margin-bottom: 1.25rem;">
             <p style="font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.18em; color: var(--text-tertiary); font-weight: 700; margin-bottom: 0.45rem;">
               Incluye en esta misión:
             </p>
-            <div style="display: flex; flex-wrap: wrap;">
+            <div style="display: flex; flex-wrap: wrap; min-height: 3.2rem;">
               ${itemsListHtml}
             </div>
           </div>
 
-          <div style="padding: 0.85rem 0; border-top: 1px solid rgba(255, 255, 255, 0.08); border-bottom: 1px solid rgba(255, 255, 255, 0.08); margin-bottom: 1.25rem; display: flex; justify-content: space-between; align-items: baseline;">
-            <span style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--text-tertiary);">Precio Colombia:</span>
-            <span class="font-display" style="font-size: 1.35rem; font-weight: 800; color: var(--gold-300); letter-spacing: 0.03em;">${product.price}</span>
-          </div>
+          <div style="margin-top: auto;">
+            <div style="padding: 0.85rem 0; border-top: 1px solid rgba(255, 255, 255, 0.08); border-bottom: 1px solid rgba(255, 255, 255, 0.08); margin-bottom: 1.25rem; display: flex; justify-content: space-between; align-items: baseline;">
+              <span style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--text-tertiary);">Precio Colombia:</span>
+              <span class="font-display" style="font-size: 1.35rem; font-weight: 800; color: var(--gold-300); letter-spacing: 0.03em;">${product.price}</span>
+            </div>
 
-          <div style="display: grid; grid-template-columns: 1fr; gap: 0.6rem;">
-            <a href="${getWhatsAppLink(`Hola MISIÓN HONOR, quiero ordenar la misión *${product.name}* (${product.collectionName}) de ${product.price}.`)}" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" style="width: 100%;">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
-              Ordenar por WhatsApp
-            </a>
-            <button class="btn btn-outline-gold btn-sm btn-inspect" data-product-id="${product.id}">
-              Ver contenido completo
-            </button>
+            <div style="display: grid; grid-template-columns: 1fr; gap: 0.6rem;">
+              <a href="${getWhatsAppLink(`Hola MISIÓN HONOR, quiero ordenar la misión *${product.name}* (${product.collectionName}) de ${product.price}.`)}" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" style="width: 100%;">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+                Ordenar por WhatsApp
+              </a>
+              <button class="btn btn-outline-gold btn-sm btn-inspect" data-product-id="${product.id}">
+                Ver contenido completo
+              </button>
+            </div>
           </div>
         </div>
       `;

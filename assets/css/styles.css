@@ -332,6 +332,21 @@ body {
   transform: scale(1.02);
 }
 
+.hero-trust-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.85rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 1.5rem;
+}
+
+@media (min-width: 480px) {
+  .hero-trust-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.85rem 1.25rem;
+  }
+}
+
 /* Product Cards (Clean E-Commerce Luxury) */
 .product-card {
   position: relative;
@@ -399,6 +414,52 @@ body {
   color: var(--text-primary);
 }
 
+/* Compromiso Social 3 Pillars Grid */
+.social-pillars-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+@media (min-width: 900px) {
+  .social-pillars-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.social-pillar-item {
+  background: rgba(12, 17, 13, 0.7);
+  border: 1px solid rgba(197, 160, 89, 0.2);
+  border-radius: var(--radius-md);
+  padding: 1.75rem 1.6rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.social-pillar-item:hover {
+  border-color: var(--gold-400);
+  background: rgba(16, 24, 18, 0.85);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5), 0 0 15px rgba(197, 160, 89, 0.12);
+}
+
+/* Tactical Specs Grid */
+.tactical-specs-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.1rem;
+  margin-bottom: 2.5rem;
+}
+
+@media (min-width: 480px) {
+  .tactical-specs-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 /* Tactical Spec Card */
 .tactical-spec-card {
   display: flex;
@@ -408,6 +469,7 @@ body {
   background: rgba(19, 27, 21, 0.6);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-sm);
+  height: 100%;
   transition: all 0.25s ease;
 }
 
@@ -430,22 +492,22 @@ body {
   color: var(--gold-400);
 }
 
-/* Tactical Dossier Card Simulator (Luxury Dark Edition) */
+/* Authentic Parchment Mission Card Simulator */
 .mission-simulator-card {
   position: relative;
-  background: #0f1611;
-  color: #f5f4ef;
+  background: linear-gradient(135deg, #fbf8f0 0%, #f5f0e3 50%, #eee6d3 100%);
+  color: #1a221b;
   border-radius: var(--radius-md);
-  padding: 2.25rem 2rem;
-  box-shadow: 0 25px 60px -10px rgba(0, 0, 0, 0.85);
-  border: 1px solid rgba(197, 160, 89, 0.35);
+  padding: clamp(1.75rem, 3vw, 2.5rem);
+  box-shadow: 0 25px 60px -10px rgba(0, 0, 0, 0.85), 0 0 25px rgba(197, 160, 89, 0.2);
+  border: 2px solid #dfbe76;
 }
 
 .mission-simulator-card::before {
   content: '';
   position: absolute;
-  inset: 6px;
-  border: 1px solid rgba(197, 160, 89, 0.15);
+  inset: 7px;
+  border: 1px solid rgba(162, 126, 56, 0.35);
   border-radius: calc(var(--radius-md) - 4px);
   pointer-events: none;
 }
@@ -751,13 +813,13 @@ body {
 .ordenes-showcase-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2rem;
+  gap: 1.5rem;
   margin-bottom: 3.5rem;
 }
 
 @media (min-width: 768px) {
   .ordenes-showcase-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -769,6 +831,9 @@ body {
   overflow: hidden;
   box-shadow: var(--shadow-md);
   transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .orden-photo-card:hover {
