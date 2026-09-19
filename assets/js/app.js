@@ -219,7 +219,8 @@ function initSimulator() {
     cumpleanos: "Hoy celebramos la vida de una persona admirable, llena de valor, fortaleza y nobleza. Que este nuevo ciclo esté colmado de conquistas, salud y alegría infinita.",
     ascenso: "Tu disciplina inquebrantable, tu honor y tu liderazgo han rendido sus frutos. Este nuevo logro es testimonio de tu entrega impecable. ¡Firme en la victoria!",
     amor: "En este mundo de batallas diarias, tu compañía es mi mayor fortaleza y tu sonrisa mi mejor recompensa. Te amo con el alma.",
-    agradecimiento: "Porque cuando todo parecía difícil estuviste en primera línea a mi lado. Gracias por tu lealtad, por tu apoyo incansable y por tu corazón generoso."
+    agradecimiento: "Porque cuando todo parecía difícil estuviste en primera línea a mi lado. Gracias por tu lealtad, por tu apoyo incansable y por tu corazón generoso.",
+    amistad: "En las buenas y en las difíciles, siempre en primera línea. Gracias por tu lealtad incondicional, por ser ese hermano que se elige para cada batalla y por honrar siempre nuestra amistad. ¡Firme al pie del cañón!"
   };
 
   function updatePreview() {
